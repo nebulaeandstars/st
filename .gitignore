@@ -1,0 +1,7 @@
+*.o
+*.reg
+*.orig
+*cache*
+config.h
+
+st
