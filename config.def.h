@@ -3,8 +3,8 @@
 // default/spare fonts
 static char *font = "monospace:size=10";
 static char *font2[] = {
-    "NotoColorEmoji:pixelsize=12:antialias=true:autohint=true",
     "JoyPixels:pixelsize=12:antialias=true:autohint=true",
+    "NotoColorEmoji:pixelsize=12:antialias=true:autohint=true",
 };
 
 static int borderpx = 10;
