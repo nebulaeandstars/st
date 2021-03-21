@@ -142,12 +142,12 @@ static const char *colorname[] = {
  */
 unsigned int defaultfg = 15;
 unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 256;
+static unsigned int defaultcs = 15;
+static unsigned int defaultrcs = 0;
 
 /* Colors used for selection */
 unsigned int selectionbg = 8;
-unsigned int selectionfg = 7;
+unsigned int selectionfg = 0;
 /* If 0 use selectionfg as foreground in order to have a uniform foreground-color */
 /* Else if 1 keep original foreground-color of each cell => more colors :) */
 static int ignoreselfg = 1;
@@ -172,7 +172,7 @@ static unsigned int rows = 24;
  * Default colour and shape of the mouse cursor
  */
 static unsigned int mouseshape = XC_xterm;
-static unsigned int mousefg = 7;
+static unsigned int mousefg = 15;
 static unsigned int mousebg = 0;
 
 /*
