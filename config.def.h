@@ -1,18 +1,13 @@
-/* See LICENSE file for copyright and license details. */
+// custom build of st
 
-/*
- * appearance
- *
- * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
- */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-/* Spare fonts */
+// default/spare fonts
+static char *font = "monospace:size=10";
 static char *font2[] = {
-/*	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
-/*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
+    "NotoColorEmoji:pixelsize=12:antialias=true:autohint=true",
+    "JoyPixels:pixelsize=12:antialias=true:autohint=true",
 };
 
-static int borderpx = 2;
+static int borderpx = 10;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -22,7 +17,7 @@ static int borderpx = 2;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/sh";
+static char *shell = "/bin/zsh";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = NULL;
@@ -109,29 +104,29 @@ char *termname = "st-256color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 8;
+unsigned int tabspaces = 4;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	"#2d2d2d",
+	"#ee6666",
+	"#66eeaa",
+	"#eeee55",
+	"#66bbee",
+	"#bb88ee",
+	"#66eedd",
+	"#a5a5a5",
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+	"#4f4f4f",
+	"#ff9999",
+	"#aaffcc",
+	"#eeeeaa",
+	"#99ccff",
+	"#ffbbff",
+	"#aaeeee",
+	"#ffffff",
 
 	[255] = 0,
 
@@ -145,13 +140,13 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 7;
+unsigned int defaultfg = 15;
 unsigned int defaultbg = 0;
 static unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 256;
 
 /* Colors used for selection */
-unsigned int selectionbg = 257;
+unsigned int selectionbg = 8;
 unsigned int selectionfg = 7;
 /* If 0 use selectionfg as foreground in order to have a uniform foreground-color */
 /* Else if 1 keep original foreground-color of each cell => more colors :) */
