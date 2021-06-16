@@ -1,7 +1,7 @@
 // custom build of st
 
 // default/spare fonts
-static char *font = "monospace:size=10";
+static char *font = "monospace:size=11.5";
 static char *font2[] = {
     "JoyPixels:pixelsize=12:antialias=true:autohint=true",
     "NotoColorEmoji:pixelsize=12:antialias=true:autohint=true",
