@@ -1,7 +1,12 @@
 // custom build of st
 
 // default/spare fonts
-static char *font = "monospace:size=11.5";
+static char *fonts[] = {
+    "monospace:size=11.5:antialias=true:autohint=true",
+    "monospace:geometry=16x16:antialias=true:autohint=true",
+};
+static int currentfont = 0;
+
 static char *font2[] = {
     "JoyPixels:pixelsize=12:antialias=true:autohint=true",
     "NotoColorEmoji:pixelsize=12:antialias=true:autohint=true",
@@ -222,6 +227,8 @@ static Shortcut shortcuts[] = {
     { MODKEY,              XK_v,           clippaste,      {.i =  0} },
     { ShiftMask,           XK_Insert,      clippaste,      {.i =  0} },
     { ShiftMask,           XK_Insert,      selpaste,       {.i =  0} },
+
+    { MODKEY,              XK_s,           cyclefonts,     {}        },
 
     { MODKEY,              XK_Num_Lock,    numlock,        {.i =  0} },
 
