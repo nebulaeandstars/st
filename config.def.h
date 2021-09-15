@@ -8,8 +8,10 @@ static char *fonts[] = {
 static int currentfont = 0;
 
 static char *font2[] = {
-    "JoyPixels:pixelsize=12:antialias=true:autohint=true",
+    "ionicons:pixelsize=12:antialias=true:autohint=true",
+    "Nerd Font Complete:pixelsize=12:antialias=true:autohint=true",
     "NotoColorEmoji:pixelsize=12:antialias=true:autohint=true",
+    "JoyPixels:pixelsize=12:antialias=true:autohint=true",
 };
 
 static int borderpx = 10;
