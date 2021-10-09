@@ -3,7 +3,7 @@
 // default/spare fonts
 static char *fonts[] = {
     "monospace:size=11.5:antialias=true:autohint=true",
-    "monospace:geometry=16x16:antialias=true:autohint=true",
+    "Terminus:size=16:antialias=true:autohint=true",
 };
 static int currentfont = 0;
 
