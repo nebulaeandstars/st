@@ -48,6 +48,14 @@ wchar_t *worddelimiters = L" ";
 static unsigned int doubleclicktimeout = 300;
 static unsigned int tripleclicktimeout = 600;
 
+/* visual-bell timeout in ms (0 to disable visual-bell) */
+static int vbelltimeout = 150;
+
+/* choose predefined visual-bell cells to inverse, or define your own logic */
+// #define VBCELL x==0 || x==right || y==0 || y==bottom  /* border */
+// #define VBCELL 1  /* all cells - whole screen */
+#define VBCELL y==bottom && x>right-2  /* bottom-right */
+
 /* alt screens */
 int allowaltscreen = 1;
 
