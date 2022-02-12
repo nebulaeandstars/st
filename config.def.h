@@ -48,14 +48,6 @@ wchar_t *worddelimiters = L" ";
 static unsigned int doubleclicktimeout = 300;
 static unsigned int tripleclicktimeout = 600;
 
-/* visual-bell timeout in ms (0 to disable visual-bell) */
-static int vbelltimeout = 150;
-
-/* choose predefined visual-bell cells to inverse, or define your own logic */
-// #define VBCELL x==0 || x==right || y==0 || y==bottom  /* border */
-// #define VBCELL 1  /* all cells - whole screen */
-#define VBCELL y==bottom && x>right-2  /* bottom-right */
-
 /* alt screens */
 int allowaltscreen = 1;
 
@@ -100,6 +92,25 @@ const int boxdraw_braille = 0;
  * it
  */
 static int bellvolume = 0;
+
+/* visual-bell timeout in ms (0 to disable visual-bell) */
+static int vbelltimeout = 150;
+
+/* choose predefined visual-bell cells to inverse, or define your own logic */
+// #define VBCELL x==0 || x==right || y==0 || y==bottom  /* border */
+// #define VBCELL 1  /* all cells - whole screen */
+#define VBCELL y==bottom && x>right-2  /* bottom-right */
+
+static int vbellmode = 1;
+/* vbellmode: 0: invert cells. 1: draw a circle with these parameters:
+ * - base and outline colors (colorname index - see below)
+ * - radius: relative to window width, or if negative: relative to cell-width
+ * - position: relative to window width/height (0 and 1 are at the edges) */
+static int vbellcolor = 8;
+static int vbellcolor_outline = 2;
+static float vbellradius = 0.01;
+static float vbellx = 0.99;
+static float vbelly = 0.99;
 
 /* default TERM value */
 char *termname = "st-256color";
