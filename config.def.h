@@ -110,7 +110,7 @@ static int vbellcolor = 8;
 static int vbellcolor_outline = 2;
 static float vbellradius = 0.01;
 static float vbellx = 0.99;
-static float vbelly = 0.99;
+static float vbelly = 0.01;
 
 /* default TERM value */
 char *termname = "st-256color";
